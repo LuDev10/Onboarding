@@ -23,12 +23,15 @@ final class OnboardingView:UIView {
         var config = UIButton.Configuration.filled()
         config.title = "Pulsa para continuar"
         config.subtitle = "Onboarding"
+        config.buttonSize = .small
+        config.baseBackgroundColor = .systemCyan
+        config.baseForegroundColor = .white
         
         let button = UIButton(type: .system)
         button.addTarget(self, action: #selector(showMessage), for: .touchUpInside)
         button.configuration = config
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.sizeToFit()
+        
         return button
     }()
     override init(frame: CGRect) {
@@ -50,8 +53,8 @@ final class OnboardingView:UIView {
         NSLayoutConstraint.activate([
             
             onboardingImageView.bottomAnchor.constraint(equalTo: textLabel.topAnchor, constant: -32),
-            onboardingButtton.leadingAnchor.constraint(equalTo: leadingAnchor),
-            onboardingButtton.trailingAnchor.constraint(equalTo: trailingAnchor),
+            onboardingButtton.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor),
+            onboardingButtton.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor),
             textLabel.bottomAnchor.constraint(equalTo: onboardingButtton.topAnchor, constant: -42),
             textLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
             textLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
