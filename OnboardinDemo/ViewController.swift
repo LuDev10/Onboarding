@@ -1,19 +1,11 @@
-//
-//  ViewController.swift
-//  OnboardinDemo
-//
-//  Created by Luis Diaz on 01/08/2023.
-//
-
 import UIKit
-
 class ViewController: UIViewController {
-
+    override func loadView() {
+        self.view = OnboardingView()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .white
     }
-
-
 }
 
