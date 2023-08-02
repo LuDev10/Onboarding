@@ -61,7 +61,9 @@ final class OnboardingView:UIView {
             textLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             
             onboardingButtton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            onboardingButtton.centerYAnchor.constraint(equalTo: centerYAnchor)
+            onboardingButtton.centerYAnchor.constraint(equalTo: centerYAnchor),
+            onboardingButtton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -70),
+            onboardingButtton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 70),
         ])
     }
     @objc func showMessage() {
